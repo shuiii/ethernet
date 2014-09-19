@@ -252,7 +252,7 @@ public class EthernetDataTracker implements NetworkStateTracker {
 	}
 
 	private boolean isUsingStaticIp() {
-		return Settings.System.getInt(mContext.getContentResolver(), Settings.Global.ETHERNET_USE_STATIC_IP, 0) == 1 ? true : false;
+		return Settings.System.getInt(mContext.getContentResolver(), "ETHERNET_USE_STATIC_IP", 0) == 1 ? true : false;
 	}
 
 	private boolean isEthernetEnabled() {
